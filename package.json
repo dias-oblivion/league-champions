@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "_moduleAliases": {
-    "@db": "db",
-    "@service": "db/services",
-    "@repositories": "db/repositories"
+    "@db": "./db",
+    "@services": "./services",
+    "@repositories": "./db/repositories"
   },
   "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
     "migrate": "node db/migrate.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,6 +28,11 @@
   "dependencies": {
     "express": "^5.1.0",
     "module-alias": "^2.2.3",
-    "sqlite3": "^5.1.7"
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7",
+    "umzug": "^3.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
